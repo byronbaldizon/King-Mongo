@@ -1,3 +1,5 @@
+
+
 # KING-MONGO
 ## Utilities
 ### Clear screen
@@ -30,11 +32,33 @@
 ### Show all data stored in collection in a nice format
     db.<name-of-collection>.find().pretty()    
 ### Insert many documents
-    db.<name-of-collection>.insert([{<document-1-json-formatted>},{object-2-json-formatted},...])
+    db.<name-of-collection>.insert([{ <document-1-json-formatted> },{ object-2-json-formatted },...])
 ### Look for documents according to a key
-    db.<name-of-collection>.find("key":"value")    
+    db.<name-of-collection>.find({ "key":"value" })    
 ### Look for documents according to multiple keys
-    db.<name-of-collection>.find("key-1":"value-1","key-2":"value-2")    
+    db.<name-of-collection>.find({ "key-1":"value-1" },{ "key-2":"value-2" })    
+### Look for the first document according to a key
+    db.<name-of-collection>.findOne({ "key":"value" })   
+    
+### Look for documents according to key but display selected keys in the result
+    db.<name-of-collection>.find({ "key":"value" },{ "key-to-be-excluded":0,"key-to-be-included":1 })  
+### Limit the number of results
+    db.<name-of-collection>.find({ "key":"value" }).limit(number-of-results)
+### Number of documents in a collection
+    db.<name-of-collection>.count()
+### Using functions with database data
+#### Use of *forEach()* function
+    db.<name-of-collection>.find().forEach(el=>print(el.<key>))
+## UPDATE a document
+### Update document (with overwriting)
+    db.<name-of-collection>.update({"key":"value" <to find>},{"key":"value" <to replace>})
+### Adding key to a document
+    db.<name-of-collection>.update({"key":"value" <to find>},{$set{"key":"value" <to add>}})
+### Adding new key with *upsert* (no overwrite)
+    
+    
+ 
+
 
    
     
