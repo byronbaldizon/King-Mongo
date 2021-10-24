@@ -1,6 +1,38 @@
-
-
 # KING-MONGO
+## MongoDB install
++ Go to https://www.mongodb.com/es
+![MONGO](https://i.postimg.cc/g07BZyyL/mongodb-1.png)
++ Click on *Software*
+![MONGO](https://i.postimg.cc/NjfNCCpr/mongodb-2.png)
++ Select community server
+![MONGO](https://i.postimg.cc/6qrHgDkC/mongodb-3.png)
++ Click on DOWNLOAD button and run the .msi installer
+## mongosh install
++ Go to https://docs.mongodb.com/mongodb-shell/install/
+![MONGOSH](https://i.postimg.cc/HstZ214g/mongosh-1.png)
++ Scroll down to Open the MongoDB Download Center and click on this link.
++ Follow instructions and complete the installation.
+![MONGOSH](https://i.postimg.cc/1RwY8q84/mongosh-2.png)
++ Fill the form with the information and press the Download button
+![MONGOSH](https://i.postimg.cc/tCbvW46k/mongosh-3.png)
++ Open to Windows Explorer
++ Go to Program Files and look for MongoDB file
++ Dive into the file and look for bin file
++ Select a copy the path to this file
+![MONGOSH](https://i.postimg.cc/9XsQBGRD/mongosh-path.png)
++ Go to search field and write *environmental variables* (*variables de entorno*)
++ Select *edit system variables*
+![MONGOSH](https://i.postimg.cc/K8tXyT8s/variables-de-entorno.png)
++ Click on new
+![MONGOSH](https://i.postimg.cc/pLSBkcHw/path-3.png)
++ Paste the url to bin file
+![MONGOSH](https://i.postimg.cc/HL79N0WV/path-4.png)
++ Click to accept
+## Install MongoDB for VS Code extension
+![MONGOSH](https://i.postimg.cc/g26Pg5hR/mongo-vs-code.png)
+
+
+
 ## Utilities
 ### Clear screen
     cls
@@ -55,6 +87,8 @@
 ### Adding key to a document
     db.<name-of-collection>.update({"key":"value" <to find>},{$set{"key":"value" <to add>}})
 ### Adding new key with *upsert* (no overwrite)
+
+
     
     
  
